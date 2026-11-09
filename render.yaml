@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: booknook-server
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: CLIENT_URL
+        value: https://booknook-touch.netlify.app
